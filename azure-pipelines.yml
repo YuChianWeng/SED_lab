@@ -1,1 +1,9 @@
-echo "hello"
+name: Hello World Workflow
+on: [push] # 當有 code push 時觸發
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a greeting
+        run: echo "hello"
