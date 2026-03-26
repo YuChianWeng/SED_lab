@@ -1,9 +1,9 @@
-name: Hello World Workflow
-on: [push] # 當有 code push 時觸發
+trigger:
+- main
 
-jobs:
-  say-hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run a greeting
-        run: echo "hello"
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo "hello"
+  displayName: '簡單測試'
